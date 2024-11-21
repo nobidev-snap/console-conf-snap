@@ -45,7 +45,7 @@ parts:
     source: https://github.com/canonical/probert.git
     source-type: git
     # following branch core/jammy
-    source-commit: 94be2fa3f45e766ecee526fdc0c15f65a78667e6
+    source-branch: core/jammy
     override-build: |
       unset LD_FLAGS
       unset LD_LIBRARY_PATH
@@ -65,11 +65,11 @@ parts:
 
   subiquity:
     plugin: nil
-    source: https://github.com/canonical/subiquity.git
+    source: https://github.com/nobidev-snap/subiquity.git
     source-type: git
     # commit including relicense to GPL3
     # https://github.com/canonical/subiquity/commit/86bce5c5e27b99df6ce6e79fc457f6f9828247ca
-    source-commit: 86bce5c5e27b99df6ce6e79fc457f6f9828247ca
+    source-branch: develop
     override-build: |
       version=$(git describe --tags)
       unset LD_FLAGS
